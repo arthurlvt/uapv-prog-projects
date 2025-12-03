@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.profile-box,
+.rules-box,
+.warning-box,
+.lesson-box,
+.game-screen,
+.complete-screen {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.warning-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff3cd;
+    border-left: 6px solid #facc15;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #2563eb;
+    color: white;
+    font-size: 1.05em;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.password-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.password-input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1.05em;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+}
+
+.toggle-password {
+    padding: 10px;
+    background: #e5e7eb;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.feedback {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.feedback.success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.feedback.error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background: #e5e7eb;
+    height: 12px;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #10b981;
+    border-radius: 10px;
+    width: 0%;
+}
+
+.hidden {
+    display: none;
+}
+
+.stat-item {
+    padding: 6px 10px;
+    border-radius: 6px;
+    background: transparent;
+    display: inline-block;
+}
+
+.stat-item.timer.warning {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+}
+
+.stat-item.timer.danger {
+    background: #fee2e2;
+    border-left: 4px solid #ef4444;
+}
+
+.found-list li {
+    margin-bottom: 6px;
+}
+
+.skipped-block {
+    margin-top: 10px;
+    padding: 10px;
+    background: #fff7ed;
+    border-radius: 8px;
+    border-left: 4px solid #f59e0b;
+}
+
+@media (max-width: 600px) {
+    .password-input {
+        font-size: 1em;
+    }
+
+    .profile-photo {
+        width: 130px;
+        height: 130px;
+    }
+}

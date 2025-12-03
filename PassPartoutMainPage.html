@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cybersécurité : Le Challenge des Mots de Passe</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="PwdGame.js" defer></script>
+</head>
+
+<body>
+  <!-- INTRO -->
+  <div class="container" id="start-screen">
+    <div class="header">
+      <img class="profile-photo"
+        src="https://media.discordapp.net/attachments/1441381261922013224/1441381623919542282/image.png?ex=6930bffe&is=692f6e7e&hm=479ee20f477fb87eec4d4b00c71e0812a43ec8f2e6891c883c366b889099ccad&=&format=webp&quality=lossless&width=1736&height=1736"
+        alt="Micheline" />
+      <h1>🔒Pass-Partout : <i>Le Challenge des Mots de Passe</h1></i> <!-- SWITCH THE TITLE IN ITALIC-->
+    </div>
+    <div class="profile-box">
+      <h2>👤 Profil de Micheline Delacroix</h2>
+      <p><strong>Née le :</strong> 1er mars 1950 à Woippy (Moselle – 57140)</p>
+      <p><strong>Profession :</strong> Caissière au Lidl de Norroy-le-Veneur</p>
+      <p><strong>Enfants :</strong> Nathalie (née le 20/04/1975) et Guillaume (né le 17/09/1979)</p>
+      <p><strong>Passions :</strong>
+        <br>‎ ‎ - Sa couleur préférée est le bleu 
+        <br>‎ ‎ - Elle aime jouer au foot avec son fils
+        <br>‎ ‎ - Elle aime faire de la gym avec sa fille
+      </p>
+      <p><strong>Animal :</strong> un cobra nommé Python</p>
+      <p style="margin-top: 10px; font-style: italic"><strong>ℹ️ Fun Fact :</strong> son quintuple
+        arrière-grand-père serait né le 30 février 1789.</p>
+    </div>
+    <div class="rules-box">
+      <h2>🎯 Règles du jeu</h2>
+      <p>• <strong>Temps total</strong> limité à 8 minutes pour tout chercher</p>
+      <p>• 4 mots de passe par niveau (avec indices si nécéssaire) dont 
+        <br>‎ ‎ ‎ - 2 points à gagner pour les niveaux 1 et 2
+        <br>‎ ‎ ‎ - 1 point pour les niveaux 3, 4 et 5 car niveaux plus durs donc comptés comme des niveaux bonus
+        <br>‎ ‎ ‎ - Score total sur 7 points (3 bits)
+      <p>• Les équipes tentent de deviner les mots de passe à partir des informations du profil</p>
+      <p>• Les niveaux 4 et 5 introduisent des caractères spéciaux et des mélanges plus complexes</p>
+      <p style="margin-top: 10px; font-size: 0.95em">✔️ Vous pouvez activer le chrono au démarrage du jeu.</p>
+    </div>
+    <div class="warning-box">
+      <div style="font-size: 1.5em">⚠️</div>
+      <div><strong>Objectif:</strong> Comprendre pourquoi les mots de passe basés sur des informations personnelles sont risqués.</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+      <input type="checkbox" id="disable-timer" />
+      <label for="disable-timer">Activer le chrono</label>
+    </div>
+    <button id="start-button" class="btn">🚀 Commencer le Challenge</button>
+  </div>
+
+  <!-- GAME -->
+  <div class="container hidden game-screen" id="game-screen">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+      <div>
+        <h2 id="level-title">Niveau</h2>
+        <p id="password-number">Mot de passe 0 / 0</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px">
+        <div class="stat-item score">🏆 <strong id="score">0</strong></div>
+        <div class="stat-item timer" id="timer-display">⏱️ <span id="timer">30</span></div>
+      </div>
+    </div>
+    <div style="margin-top: 14px">
+      <p><strong>🔍 Entrez un mot de passe :</strong></p>
+      <div class="password-input-wrapper">
+        <input id="password-input" class="password-input" type="password" placeholder="Entrez un mot de passe..." />
+        <button id="toggle-password-btn" class="toggle-password" title="Afficher/masquer">👁️</button>
+      </div>
+      <div id="hint" class="hidden" style="margin-top: 10px"></div>
+      <div style="margin-top: 12px; display: flex; gap: 8px">
+        <button id="validate-btn" class="btn" style="background-color: #047857">✓ Valider</button>
+        <button id="hint-btn" class="btn">💡 Indice</button>
+        <button id="skip-btn" class="btn" style="background-color: rgb(106, 2, 2); color: white">⏭️ Skip</button>
+      </div>
+      <div id="feedback" class="feedback hidden"></div>
+    </div>
+    <div style="margin-top: 18px; font-size: 0.95em; color: #374151">
+      <strong>Mots de passe trouvés :</strong>
+      <ul id="found-passwords-list" class="found-list" style="margin-top: 8px; list-style-type: none; padding-left: 0">
+      </ul>
+      <div id="skipped-passwords" class="skipped-block hidden">
+        <strong>Mots de passe manqués :</strong>
+        <ul id="skipped-list" style="margin-top: 6px; list-style-type: none; padding-left: 0"></ul>
+      </div>
+    </div>
+    <div style="margin-top: 18px; display: flex; gap: 16px; flex-wrap: wrap">
+      <div style="flex: 1; min-width: 240px">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+          <span>Progression</span>
+          <span id="progress-text">0 / 0</span>
+        </div>
+        <div class="progress-bar-container">
+          <div id="progress-bar" class="progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMPLETE -->
+  <div class="container hidden complete-screen" id="end-screen">
+    <div style="text-align: center">
+      <div style="font-size: 3rem">🏆</div>
+      <h1>Challenge Terminé !</h1>
+    </div>
+    <div style="margin-top: 12px; text-align: center">
+      <div style="font-size: 2rem; font-weight: bold" id="final-score">0</div>
+      <p style="color: #6b7280" id="max-score-text">points sur ...</p>
+      <p id="percentage" style="margin-top: 6px"></p>
+      <p id="hints-used"></p>
+    </div>
+    <div style="text-align: center; margin-top: 12px">
+      <button id="replay-btn" class="btn">🔄 Rejouer</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</body>
+
+</html>
