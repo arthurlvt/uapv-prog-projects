@@ -1,87 +1,87 @@
-# Pass Partout - le Challenge des mots de passes
+# Pass Partout – The Password Challenge
 
 > [!IMPORTANT]
-> L'objectif de l'atelier à posteriori est de sensibiliser les lycéens à la création de mots de passe robustes et aux risques liés à l'utilisation d'informations personnelles. L'activité se présente sous forme
-> d'un jeu chronométré, par équipes, où les participants doivent deviner des mots de passe inspirés d'un faux profil : **Micheline Delacroix**.
+> The goal of this workshop is to raise high-school students’ awareness about creating strong passwords and the risks of using personal information.  
+> The activity takes the form of a **timed team game**, where participants must guess passwords inspired by a fake profile: **Micheline Delacroix**.
 
 ---
 
-# 👩 Profil fictif : Micheline Delacroix
+# 👩 Fictional Character: Micheline Delacroix
 
-* **Nom** : Micheline Delacroix
-* **Née le** : 1er mars 1950 à **Woippy** (Moselle – 57140)
-* **Profession** : Caissière au **Lidl** de Norroy-le-Veneur
-* **Enfants** :
-  * Nathalie ( née le **20/04/1975**)
-  * Guillaume (né le **17/09/1979**)
-* **Animal domestique** : un **cobra** nommé *Python* (car elle aime le langage Python et s'est trompée sur l'espèce...)
-* **Logement** : maison familiale héritée de son **quadruple arrière‑grand‑père**, chevalier au château de Neuilly‑sur‑Seine.
-* **Fun Fact** : son **quintuple arrière‑grand‑père** serait né le *30 février 1789* (date évidemment impossible → pour piéger les joueurs 😉).
+* **Name:** Micheline Delacroix  
+* **Born:** March 1st, 1950 in **Woippy** (Moselle – 57140)  
+* **Profession:** Cashier at **Lidl** in Norroy-le-Veneur  
+* **Children:**  
+  * Nathalie (born **04/20/1975**)  
+  * Guillaume (born **09/17/1979**)  
+* **Pet:** a **cobra** named *Python* (she loves the Python language and got the species wrong…)  
+* **Home:** family house inherited from her **quadruple great-grandfather**, a knight from the Neuilly-sur-Seine castle.  
+* **Fun Fact:** her **quintuple great-grandfather** is said to have been born on *February 30th, 1789* (an impossible date → to trick players 😉)
+
+---
+
+# 🕹️ Game Rules
+
+* 5 levels with increasing difficulty  
+* 8 minutes total to find all passwords  
+* 4 passwords per level (with clues if necessary)  
+    - 2 points for levels 1 and 2  
+    - 1 point for levels 3, 4, and 5 (harder → bonus levels)  
+    - Total score out of 7 points (≈ 3 bits)  
+* Teams try to guess passwords based on profile information (hints provided if needed)  
+* Levels 4 and 5 introduce special characters and more complex mixes  
 
 ---
 
-# 🕹️ Règles du jeu
+# 🧩 Levels and Difficulty
 
-* 5 niveaux de difficulté croissante
-* Temps total limité à 8 minutes pour tout chercher
-* 4 mots de passe par niveau (avec indices si nécéssaire) dont
-    - 2 points à gagner pour les niveaux 1 et 2
-    - 1 point pour les niveaux 3, 4 et 5 car niveaux 
-      plus durs donc comptés comme des niveaux bonus
-    - Score total sur 7 points (3 bits)
-* Les équipes tentent de deviner les mots de passe à partir des informations du profil (indices donnés si besoin)
-* Les niveaux 4 et 5 introduisent des caractères spéciaux et des mélanges plus complexes
+## 🧩 Level 1 – **Easy**
 
----
-# 🧩 Les différents niveaux et difficultés
+⭐ **2 points for this level – 4 digits**
 
-## 🧩 Niveau 1 – **Facile**
+*Purpose: show that simple passwords are dangerous.*
 
-⭐ **2 points pour le niveau - 4 chiffres**
-
-*But : montrer que les mots de passe trop simples sont dangereux.*
-
-* **mdp1 :** `1950` — *Date de naissance de Micheline*
-* **mdp2 :** `1975` — *Année de naissance de Nathalie*
-* **mdp3 :** `0350` — *Mois + deux derniers chiffres de l'année*
-* **mdp4 :** `2004` - *Année naissance de Nathalie*
+* **pwd1:** `1950` — *Micheline’s birth year*  
+* **pwd2:** `1975` — *Nathalie’s birth year*  
+* **pwd3:** `0350` — *Month + last two digits of the year*  
+* **pwd4:** `2004` — *Nathalie’s birth year*  
 
 
-## 🧩 Niveau 2 – **Intermédiaire**
+## 🧩 Level 2 – **Intermediate**
 
-⭐ **2 points pour le niveau - 4 lettres + 2 chiffres**
+⭐ **2 points for this level – 4 letters + 2 digits**
 
-* **mdp1 :** `bleu03` — *Sa couleur préférée + jour de naissance*
-* **mdp2 :** `lidl01` — *Lieu de travail + jour de naissance*
-* **mdp3 :** `mich50` — *Son prénom + deux chiffres de naissance*
-* **mdp4 :** `pyth03` - *Son animal préféré + mois de naissance*
-
-
-## 🧩 Niveau 3 – **Difficile** - 6 caractères (lettres + chiffres)
-
-⭐ **1 point pour le niveau**
-
-* **mdp1 :** `cobra3` — *Son animal + nombre qu'elle possède*
-* **mdp2 :** `foot57` — *Son sport préféré + département*
-* **mdp3 :** `vente50` — *Son métier d'avant + année*
-* **mdp4 :** `woip79`- *Ville + année de naissance d'un des enfants*
+* **pwd1:** `bleu03` — *Her favorite color + day of birth*  
+* **pwd2:** `lidl01` — *Workplace + day of birth*  
+* **pwd3:** `mich50` — *Her first name + last two birth-year digits*  
+* **pwd4:** `pyth03` — *Her favorite animal + birth month*  
 
 
-## 🧩 Niveau 4 – **Difficile** - 6 caractères (lettres + chiffres + symboles)
+## 🧩 Level 3 – **Difficult** – 6 characters (letters + digits)
 
-⭐ **1 point pour le niveau**
+⭐ **1 point for this level**
 
-* **mdp1 :** `gym@75` — *Sport de Nathalie + @ + année de naissance*
-* **mdp2 :** `art79!` — *Passion de Guillaume + année + !*
-* **mdp3 :** `lid@50` — *Travail + symbole + année*
-* **mdp4 :** `py@03!` - *Animal + @ + mois + !*
+* **pwd1:** `cobra3` — *Her animal + how many she has*  
+* **pwd2:** `foot57` — *Her favorite sport + department number*  
+* **pwd3:** `vente50` — *Her previous job + year*  
+* **pwd4:** `woip79` — *City + one child’s birth year*  
 
 
-## 🧩 Niveau 5 – **Difficile** - 8 caractères (lettres + chiffres + symboles)
+## 🧩 Level 4 – **Difficult** – 6 characters (letters + digits + symbols)
 
-⭐ **1 point pour le niveau**
+⭐ **1 point for this level**
 
-* **mdp1 :** `ch@te@u1` — *Lieu d'héritage avec des @ et chiffres*
-* **mdp2 :** `pyth@1950` — *Travail + années de naissance des enfants*
-* **mdp3 :** `pyth@1950` - *Animal + symbole + année *
-* **mdp3 :** `neuilly92` — *Ville + code département*
+* **pwd1:** `gym@75` — *Nathalie’s sport + @ + her birth year*  
+* **pwd2:** `art79!` — *Guillaume’s hobby + year + !*  
+* **pwd3:** `lid@50` — *Workplace + symbol + year*  
+* **pwd4:** `py@03!` — *Animal + @ + month + !*  
+
+
+## 🧩 Level 5 – **Difficult** – 8 characters (letters + digits + symbols)
+
+⭐ **1 point for this level**
+
+* **pwd1:** `ch@te@u1` — *Inheritance place with @ and digits*  
+* **pwd2:** `pyth@1950` — *Animal + birth years of children*  
+* **pwd3:** `pyth@1950` — *Animal + symbol + year*  
+* **pwd4:** `neuilly92` — *City + department code*  
